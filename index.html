@@ -1,67 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-<title>GH68 안전관리 포털</title>
- 
-<style>
-body {
-margin: 0;
-padding: 20px;
-background: #f4f4f4;
-font-family: Arial, sans-serif;
-}
- 
-.container {
-max-width: 500px;
-margin: auto;
-}
- 
-h1 {
-text-align: center;
-}
- 
-.card {
-display: block;
-text-decoration: none;
-color: white;
-padding: 20px;
-margin: 12px 0;
-border-radius: 12px;
-font-size: 20px;
-font-weight: bold;
-}
- 
-.green { background:#198754; }
-.blue { background:#0d6efd; }
-.orange { background:#fd7e14; }
-.red { background:#dc3545; }
-.purple { background:#6f42c1; }
-</style>
- 
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+ <title>현장 안전관리 시스템 | SafetyBoard</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
- 
-<div class="container">
- 
-<h1>🏗️ GH68 안전관리 포털</h1>
- 
-<a href험작업 현황
-</a>
- 
-#
-📢 안전신문고
-</a>
- 
-#
-📋 현장 안전점검
-</a>
- 
-#
-☎️ 비상연락망
-</a>
- 
-<a href="#" class="card purple">body>
+  <header class="topbar">
+    <h1>🦺 현장 안전관리</h1>
+    <span id="todayLabel"></span>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-view="dashboard">대시보드</button>
+    <button class="tab" data-view="risk">위험성평가</button>
+    <button class="tab" data-view="near">아차사고</button>
+    <button class="tab" data-view="tbm">TBM 일지</button>
+  </nav>
+
+  <main id="app"></main>
+
+  <footer class="footer">
+    <button id="exportBtn" class="ghost">CSV 내보내기</button>
+    <button id="backupBtn" class="ghost">JSON 백업</button>
+    <input type="file" id="restoreInput" accept=".json" hidden />
+   <button id="restoreBtn" class="ghost">복원</button>
+  </footer>
+
+  <script src="./assets/js/store.js"></script>
+  <script src="./assets/js/risk.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
 </html>
